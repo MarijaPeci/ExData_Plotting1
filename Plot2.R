@@ -39,6 +39,7 @@ power_df[, nums] <- lapply(power_df[,nums],
                            FUN = function(x) as.double(x)) 
 #create the 2nd plot
 
+Sys.setlocale("LC_TIME","English")
 png(filename = "Plot2.png", width = 480, height = 480)
 ggplot(power_df, aes(x = DateTime, y = Global_active_power)) +
         geom_line() +

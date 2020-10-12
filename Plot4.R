@@ -45,6 +45,8 @@ power_df[, nums] <- lapply(power_df[,nums],
 #create the 4th plot
 
 ## 1st plot
+
+Sys.setlocale("LC_TIME","English")
 p_1 <- ggplot(power_df, aes(x = DateTime, y = Global_active_power)) +
         geom_line() +
         scale_x_datetime(date_labels = "%a", date_breaks = "1 day") +

@@ -50,7 +50,7 @@ sub_power <- power_df[, (7:10)]
 sub_pw <- melt(sub_power, id = c("DateTime"))
 
 ## 2 - The graph
-
+Sys.setlocale("LC_TIME","English")
 ggplot(sub_pw) +
         geom_line(aes(x = DateTime, y = value, colour = variable)) +
         scale_colour_manual(values = c("black", "red", "blue")) +
